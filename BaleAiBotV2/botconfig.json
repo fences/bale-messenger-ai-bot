@@ -1,7 +1,7 @@
 {
-  "BOT_TOKEN": "1699715395:OOjIdsqkIekcwAAW-1H4ncR8pctdM3OJwuo",
+  "BOT_TOKEN": "1",
   "BASE_URL": "https://tapi.bale.ai/bot",
-  "AVAL_API_KEY": "aa-5H9wv82GOxJG5mCtlyhvGEW6K72mKnwHVxplMpHDzqYUOJ4x",
+  "AVAL_API_KEY": "",
   "AVAL_BASE_URL": "https://api.avalapis.ir/v1",
   "AVAL_BASE_CREDIT": "https://api.avalapis.ir/user/v1/credit",
   "AVALAI_BASE_AUDIO_URL": "https://api.avalapis.ir/v1/audio/transcriptions",
