@@ -145,6 +145,17 @@ namespace ConfigEditor
             File.WriteAllText(path, jsonOutput);
         }
 
+        private TextBox CreateTextBox(string defaultValue, bool isPassword = false)
+        {
+            TextBox txt = new TextBox { Text = defaultValue, Anchor = AnchorStyles.Left | AnchorStyles.Right };
+            if (isPassword)
+            {
+                txt.UseSystemPasswordChar = true;
+            }
+            return txt;
+        }
+
+
         private void BuildControlsFromJson(JsonObject root)
         {
             _contentTable.Controls.Clear();
@@ -185,9 +196,15 @@ namespace ConfigEditor
                     else if (rawVal is double d)
                         editorControl = CreateNumericUpDown((decimal)d, -1000000M, 1000000M, 2);
                     else if (rawVal is string s)
-                        editorControl = CreateTextBox(s);
+                    {
+                        bool isPassword = (key == "BOT_TOKEN" || key == "AVAL_API_KEY");
+                        editorControl = CreateTextBox(s, isPassword);
+                    }
                     else
+                    {
                         editorControl = CreateTextBox(rawVal?.ToString() ?? "");
+                    }
+
                 }
 
                 if (editorControl != null)

@@ -1,5 +1,5 @@
 {
-  "BOT_TOKEN": "1",
+  "BOT_TOKEN": "",
   "BASE_URL": "https://tapi.bale.ai/bot",
   "AVAL_API_KEY": "",
   "AVAL_BASE_URL": "https://api.avalapis.ir/v1",
